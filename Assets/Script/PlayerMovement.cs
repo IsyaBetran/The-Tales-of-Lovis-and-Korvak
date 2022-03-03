@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
     public void Update(){
         //Double Jump
         if(diTanah == true){
-            lompat = 2;
+            lompat = 1;
         }
         //lompat
         if(Input.GetKeyDown(KeyCode.Space) && lompat > 0){
