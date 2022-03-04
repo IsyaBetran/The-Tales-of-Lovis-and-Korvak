@@ -154,7 +154,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.19665071}
+  m_Offset: {x: 0.039357543, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -165,7 +165,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.6066986}
+  m_Size: {x: 1.078715, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &257021673
 SpriteRenderer:
@@ -226,7 +226,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 257021671}
   m_LocalRotation: {x: -0, y: -0, z: 0.70729536, w: 0.7069183}
-  m_LocalPosition: {x: -3.03, y: -2.92, z: 0}
+  m_LocalPosition: {x: -4.48, y: -2.54, z: 0}
   m_LocalScale: {x: 4.9129024, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -667,7 +667,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 907820026}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tanah
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -791,7 +791,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919646269}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.94, y: -1.05, z: 0}
+  m_LocalPosition: {x: 0.4, y: -0.57, z: 0}
   m_LocalScale: {x: 8.920236, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1138,7 +1138,8 @@ GameObject:
   - component: {fileID: 2094964415}
   - component: {fileID: 2094964419}
   - component: {fileID: 2094964420}
-  m_Layer: 10
+  - component: {fileID: 2094964421}
+  m_Layer: 3
   m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1277,9 +1278,6 @@ MonoBehaviour:
   tanahnya:
     serializedVersion: 2
     m_Bits: 256
-  tangga:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!95 &2094964420
 Animator:
   serializedVersion: 3
@@ -1299,3 +1297,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2094964421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094964414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 262e9c501c2df154ab7aae9c0bc27a28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kecepatan: 2
+  badan: {fileID: 2094964416}

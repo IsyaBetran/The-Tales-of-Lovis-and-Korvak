@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private float jalan;
+    private float naik;
     private Rigidbody2D badan;
     Transform t;
     public float tinggiLompat;
@@ -15,9 +17,6 @@ public class PlayerMovement : MonoBehaviour
     public float cekKejauhan;
     public LayerMask tanahnya;
 
-    public LayerMask tangga;
-    private bool naikTangga;
-
     private float lompat = 1;
 
     private void Awake(){
@@ -27,26 +26,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update(){
         //berjalan
-        var jalan = Input.GetAxis("Horizontal");
+        jalan = Input.GetAxis("Horizontal");
         badan.velocity = new Vector2(jalan * kecepatan, badan.velocity.y);
-
-        RaycastHit2D kena = Physics2D.Raycast(transform.position, Vector2.up, cekKejauhan, tangga);
-        if(kena.collider != null){
-            if(Input.GetKeyDown(KeyCode.UpArrow)){
-                naikTangga =  true;
-            }       
-        }else{
-            naikTangga = false;
-        }
-
-        if(naikTangga == true){
-            var naik = Input.GetAxis("Vertical");
-            badan.velocity = new Vector2(badan.position.x, naik * kecepatan);
-            badan.gravityScale = 0f;
-        }else{
-            badan.gravityScale = 2f;
-        }
-        
+       
         //balik badan
         if(jalan > 0.01f){
             transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
@@ -64,4 +46,5 @@ public class PlayerMovement : MonoBehaviour
             lompat--;
         }  
     }
+
 }
