@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - BagianBawah
+  - Tangga
   layers:
   - Default
   - TransparentFX
@@ -12,11 +13,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Tangga
+  - Tembok
   - Tanah
   - 
-  - 
+  - Player
   - 
   - 
   - 
@@ -41,4 +42,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2104920893
+    locked: 0
+  - name: Mid
+    uniqueID: 2164036453
+    locked: 0
+  - name: Player
+    uniqueID: 1626891709
+    locked: 0
+  - name: Foreground
+    uniqueID: 1739391667
     locked: 0
