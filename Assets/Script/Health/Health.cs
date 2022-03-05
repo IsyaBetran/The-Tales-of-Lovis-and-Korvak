@@ -39,5 +39,9 @@ public class Health : MonoBehaviour
             KenaDamage(0.5f);
     }
 
+    public void AddHealth(float _value)
+    {
+        healthSaatIni = Mathf.Clamp(healthSaatIni + _value, 0, healthAwal);
+    }
 
 }
