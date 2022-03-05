@@ -8,6 +8,7 @@ public class Duri : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            Health a = GetComponentInChildren<Health>();
             collision.GetComponentInChildren<Health>().KenaDamage(damage);
         }
     }

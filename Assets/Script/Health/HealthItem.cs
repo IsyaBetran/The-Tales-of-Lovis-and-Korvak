@@ -4,6 +4,7 @@ public class HealthItem : MonoBehaviour
 {
     [SerializeField] private float tambahHealth;
 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
@@ -12,7 +13,8 @@ public class HealthItem : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+    private void Update()
+    {
         
-
-        
+    }
 }

@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private float jalan;
     private float naik;
-    private Rigidbody2D badan;
+    public Rigidbody2D badan { get; private set; }
     Transform t;
     public float tinggiLompat;
 

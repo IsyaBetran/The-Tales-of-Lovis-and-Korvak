@@ -1,18 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class tombol : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Renderer r;
+    public bool pressed = false;
+
+    private void Awake()
     {
+        r = GetComponent<Renderer>();
         
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 0);
+            pressed = true;
+                       
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        
+        GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);     
     }
+
 }

@@ -28,15 +28,10 @@ public class Health : MonoBehaviour
             {
                 anim.SetTrigger("die");
                 GetComponentInParent<PlayerMovement>().enabled = false;
+                GetComponentInParent<PlayerMovement>().badan.velocity = new Vector2(0, 0);
                 dead = true;
             }
         }
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-            KenaDamage(0.5f);
     }
 
     public void AddHealth(float _value)
