@@ -24,11 +24,7 @@ public class PlayerMovement : MonoBehaviour
         t = transform;
     }
 
-    private void Update(){
-        //berjalan
-        jalan = Input.GetAxis("Horizontal");
-        badan.velocity = new Vector2(jalan * kecepatan, badan.velocity.y);
-       
+    private void Update(){       
         //balik badan
         if(jalan > 0.01f){
             transform.localScale = new Vector3(1, 1, 1);
@@ -45,8 +41,13 @@ public class PlayerMovement : MonoBehaviour
             badan.velocity = new Vector2(badan.velocity.x, tinggiLompat);
             lompat--;
         }  
+    }
 
-
+    public void FixedUpdate(){
+        //berjalan
+        jalan = Input.GetAxis("Horizontal");
+        badan.velocity = new Vector2(jalan * kecepatan, badan.velocity.y);
+       
     }
 
 }
