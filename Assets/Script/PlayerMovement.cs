@@ -31,9 +31,9 @@ public class PlayerMovement : MonoBehaviour
        
         //balik badan
         if(jalan > 0.01f){
-            transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
+            transform.localScale = new Vector3(1, 1, 1);
         }else if(jalan < -0.01f){
-            transform.localScale = new Vector3(-0.15f, 0.15f, 0.15f);
+            transform.localScale = new Vector3(-1, 1, 1);
         }  
         diTanah = Physics2D.OverlapCircle(cekTanah.position, cekKejauhan, tanahnya);
         //Double Jump
@@ -45,6 +45,8 @@ public class PlayerMovement : MonoBehaviour
             badan.velocity = new Vector2(badan.velocity.x, tinggiLompat);
             lompat--;
         }  
+
+
     }
 
 }
