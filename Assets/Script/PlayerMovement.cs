@@ -40,16 +40,14 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space) && lompat > 0){
             badan.velocity = new Vector2(badan.velocity.x, tinggiLompat);
             lompat--;
-        }  
+        }   
+        
+        
     }
 
     public void FixedUpdate(){
         //berjalan
         jalan = Input.GetAxis("Horizontal");
-        badan.velocity = new Vector2(jalan * kecepatan, badan.velocity.y);
-       
+        badan.velocity = new Vector2(jalan * kecepatan, badan.velocity.y);     
     }
-
-
-
 }

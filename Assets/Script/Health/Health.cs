@@ -5,7 +5,7 @@ public class Health : MonoBehaviour
     [SerializeField] private float healthAwal;
     public float healthSaatIni { get; private set; }
     private Animator anim;
-    private bool dead;
+    public bool dead;
 
     void Awake()
     {
@@ -26,10 +26,8 @@ public class Health : MonoBehaviour
         {
             if (!dead)
             {
-                anim.SetTrigger("die");
-                GetComponentInParent<PlayerMovement>().enabled = false;
-                GetComponentInParent<PlayerMovement>().badan.velocity = new Vector2(0, 0);
                 dead = true;
+                healthSaatIni = healthAwal;
             }
         }
     }
@@ -38,5 +36,4 @@ public class Health : MonoBehaviour
     {
         healthSaatIni = Mathf.Clamp(healthSaatIni + _value, 0, healthAwal);
     }
-
 }
