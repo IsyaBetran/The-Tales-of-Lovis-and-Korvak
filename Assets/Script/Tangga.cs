@@ -13,6 +13,7 @@ public class Tangga : MonoBehaviour
 
     void Update()
     {
+        //mengecek apakah bisa naik tangga
         naik = Input.GetAxisRaw("Vertical");
 
         if (adaTangga && Mathf.Abs(naik) > 0f)

@@ -16,10 +16,12 @@ public class Health : MonoBehaviour
 
     public void KenaDamage (float _damage)
     {
+        //method untuk mengurangi darah player
         healthSaatIni = Mathf.Clamp(healthSaatIni - _damage, 0, healthAwal);
 
         if (healthSaatIni > 0)
         {
+            //jika darah masih ada, animasi hurt akan terjadi
             anim.SetTrigger("hurt");
             //iframes
         }
@@ -27,6 +29,7 @@ public class Health : MonoBehaviour
         {
             if (!dead)
             {
+                //bool dead digunakan di script checkpoint
                 dead = true;
                 healthSaatIni = healthAwal;
             }
@@ -35,14 +38,16 @@ public class Health : MonoBehaviour
 
     public void AddHealth(float _value)
     {        
+            //method untuk menambah darah
             healthSaatIni = Mathf.Clamp(healthSaatIni + _value, 0, healthAwal);               
     }
 
     public void Update(){
+        //mengecek apakah darah penuh atau tidak.
         if(healthSaatIni == healthAwal){
-            penuh = false;
-        }else{
             penuh = true;
+        }else{
+            penuh = false;
         }
     }
 }
