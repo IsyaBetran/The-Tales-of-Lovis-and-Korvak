@@ -6,6 +6,7 @@ public class Health : MonoBehaviour
     public float healthSaatIni { get; private set; }
     private Animator anim;
     public bool dead;
+    public bool penuh;
 
     void Awake()
     {
@@ -33,7 +34,15 @@ public class Health : MonoBehaviour
     }
 
     public void AddHealth(float _value)
-    {
-        healthSaatIni = Mathf.Clamp(healthSaatIni + _value, 0, healthAwal);
+    {        
+            healthSaatIni = Mathf.Clamp(healthSaatIni + _value, 0, healthAwal);               
+    }
+
+    public void Update(){
+        if(healthSaatIni == healthAwal){
+            penuh = false;
+        }else{
+            penuh = true;
+        }
     }
 }
