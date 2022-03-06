@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 13146308}
   - component: {fileID: 13146307}
   - component: {fileID: 13146311}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: kotak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6510,7 +6510,7 @@ MonoBehaviour:
   jarak: 0.9
   boxMask:
     serializedVersion: 2
-    m_Bits: 503
+    m_Bits: 512
 --- !u!114 &329344648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7051,6 +7051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tambahHealth: 1
+  health: {fileID: 2094964415}
 --- !u!61 &612112524
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8051,6 +8052,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthAwal: 3
   dead: 0
+  penuh: 0
 --- !u!114 &2094964416
 MonoBehaviour:
   m_ObjectHideFlags: 0
