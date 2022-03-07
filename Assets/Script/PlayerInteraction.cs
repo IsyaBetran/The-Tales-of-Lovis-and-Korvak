@@ -6,6 +6,7 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] private float jarak;
     GameObject kotak;
     public LayerMask boxMask;
+    public bool pegang;
 
     private void Update()
     {
@@ -19,11 +20,13 @@ public class PlayerInteraction : MonoBehaviour
             kotak = hit.collider.gameObject;
             kotak.GetComponent<FixedJoint2D>().enabled = true;
             kotak.GetComponent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
+            pegang = true;
         }
         else if (Input.GetKeyUp(KeyCode.E))
         {
             //jika tombol E dilepas, kotak tidak fixedjoined
             kotak.GetComponent<FixedJoint2D>().enabled = false;
+            pegang = false;
         }
     }
 

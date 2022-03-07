@@ -12,12 +12,14 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]private float kecepatan;
 
-    private bool diTanah;
+    public bool diTanah;
     public Transform cekTanah;
     public float cekKejauhan;
     public LayerMask tanahnya;
 
     private float lompat = 1;
+    [SerializeField]private PlayerInteraction playerIn;
+    private Vector3 lastPosition;
 
     private void Awake(){
         badan = GetComponent<Rigidbody2D>();
@@ -26,11 +28,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update(){       
         //balik badan
-        if(jalan > 0.01f){
+        if(playerIn.pegang){
+            transform.localScale = lastPosition;
+        }else if(jalan > 0.01f){
             transform.localScale = new Vector3(1, 1, 1);
+            lastPosition = transform.localScale;
         }else if(jalan < -0.01f){
             transform.localScale = new Vector3(-1, 1, 1);
+            lastPosition = transform.localScale;
         }  
+        
         diTanah = Physics2D.OverlapCircle(cekTanah.position, cekKejauhan, tanahnya);
         //Double Jump
         if(diTanah == true){

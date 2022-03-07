@@ -358,7 +358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 88090952}
   - component: {fileID: 88090953}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tangga
   m_TagString: Tangga
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -545,7 +545,7 @@ GameObject:
   m_Component:
   - component: {fileID: 170971426}
   - component: {fileID: 170971427}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Root
   m_TagString: Tangga
   m_Icon: {fileID: 0}
@@ -6392,7 +6392,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 6200000, guid: bfb4583540f33e444b9fe1546eb3ff47, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -6459,7 +6459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 262e9c501c2df154ab7aae9c0bc27a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kecepatan: 4
+  kecepatan: 5
   badan: {fileID: 329344642}
 --- !u!114 &329344645
 MonoBehaviour:
@@ -6475,11 +6475,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tinggiLompat: 8
   kecepatan: 5
+  diTanah: 0
   cekTanah: {fileID: 907820026}
   cekKejauhan: 0.3
   tanahnya:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 768
+  playerIn: {fileID: 329344647}
 --- !u!4 &329344646
 Transform:
   m_ObjectHideFlags: 0
@@ -6511,6 +6513,7 @@ MonoBehaviour:
   boxMask:
     serializedVersion: 2
     m_Bits: 512
+  pegang: 0
 --- !u!114 &329344648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6658,7 +6661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 496395686}
   - component: {fileID: 496395687}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Root (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6839,7 +6842,7 @@ GameObject:
   m_Component:
   - component: {fileID: 579052301}
   - component: {fileID: 579052302}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Root (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7088,7 +7091,7 @@ GameObject:
   m_Component:
   - component: {fileID: 741794583}
   - component: {fileID: 741794584}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Root (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7202,7 +7205,7 @@ GameObject:
   - component: {fileID: 845528548}
   - component: {fileID: 845528547}
   - component: {fileID: 845528546}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: pintu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7487,7 +7490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1208759344}
   - component: {fileID: 1208759345}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Root (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7732,7 +7735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1765371690}
   - component: {fileID: 1765371691}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Root (6)
   m_TagString: Tangga
   m_Icon: {fileID: 0}
@@ -7814,7 +7817,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1769624701}
   - component: {fileID: 1769624702}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Root (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8065,6 +8068,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c265eb790a4ecf94bbab1ed271b3723a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 329344645}
+  playerIn: {fileID: 329344647}
+  diBawah: 0
+  cekBawah: {fileID: 907820026}
+  cekKejauhan: 0.3
+  bawahnya:
+    serializedVersion: 2
+    m_Bits: 960
 --- !u!212 &2094964417
 SpriteRenderer:
   m_ObjectHideFlags: 0
