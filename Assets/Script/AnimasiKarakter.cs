@@ -34,27 +34,26 @@ public class AnimasiKarakter : MonoBehaviour
             anim.SetBool("Berjalan", false);
         }
 
-        if(playerIn.pegang){
-            anim.SetBool("Dorong", true);
-        }else{
-            anim.SetBool("Dorong", false);
-        }
-
-        if(player.diTanah == false && Input.GetKeyDown(KeyCode.Space) == false){
-            anim.SetBool("Jatuh", true);
-        }
+        
 
         diBawah = Physics2D.OverlapCircle(cekBawah.position, cekKejauhan, bawahnya);
-        if(Input.GetKeyDown(KeyCode.Space) && player.diTanah){
-            anim.SetTrigger("Takeoff");
-        }else if(player.diTanah || diBawah){
+        if(player.diTanah || diBawah){
             anim.SetBool("Jump", false);
             anim.SetBool("Jatuh", false);
+        }else if(Input.GetKeyDown(KeyCode.Space) && diBawah && playerIn.pegang == false){
+            anim.SetTrigger("Takeoff");
+        }else if(player.diTanah == false && Input.GetKeyDown(KeyCode.Space) == false){
+            anim.SetBool("Jatuh", true);
         }else{
             anim.SetBool("Jump", true);
         }
         
         
+        if(playerIn.pegang){
+            anim.SetBool("Dorong", true);
+        }else{
+            anim.SetBool("Dorong", false);
+        }
     }
     
 }

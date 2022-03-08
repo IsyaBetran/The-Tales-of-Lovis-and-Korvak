@@ -26,7 +26,11 @@ public class PlayerMovement : MonoBehaviour
         t = transform;
     }
 
-    private void Update(){       
+    private void Update(){    
+        //berjalan
+        jalan = Input.GetAxis("Horizontal");
+        badan.velocity = new Vector2(jalan * kecepatan, badan.velocity.y);   
+
         //balik badan
         if(playerIn.pegang){
             transform.localScale = lastPosition;
@@ -47,14 +51,8 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space) && lompat > 0){
             badan.velocity = new Vector2(badan.velocity.x, tinggiLompat);
             lompat--;
-        }   
+        }
         
         
-    }
-
-    public void FixedUpdate(){
-        //berjalan
-        jalan = Input.GetAxis("Horizontal");
-        badan.velocity = new Vector2(jalan * kecepatan, badan.velocity.y);     
     }
 }

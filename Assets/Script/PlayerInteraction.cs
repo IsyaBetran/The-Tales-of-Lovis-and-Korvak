@@ -7,14 +7,19 @@ public class PlayerInteraction : MonoBehaviour
     GameObject kotak;
     public LayerMask boxMask;
     public bool pegang;
+    public Transform cekKaki;
+    private bool diTanah;
+    public float cekKejauhan;
+    public LayerMask tanahnya;
 
     private void Update()
     {
         //mendeteksi apakah didepan player ada kotak atau tidak
         Physics2D.queriesStartInColliders = false;
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * transform.localScale.x, jarak, boxMask);
+        diTanah = Physics2D.OverlapCircle(cekKaki.position, cekKejauhan, tanahnya);
 
-        if (hit.collider != null && Input.GetKeyDown(KeyCode.E))
+        if (hit.collider != null && Input.GetKeyDown(KeyCode.E) && diTanah)
         {
             //jika didepan player ada kotak dan player menekan tombol E, kotak akan fixed join permframe tepat disamping player
             kotak = hit.collider.gameObject;
