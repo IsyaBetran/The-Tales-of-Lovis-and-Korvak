@@ -1,17 +1,25 @@
 using UnityEngine;
+using System.Collections;
 
 public class Health : MonoBehaviour
 {
+    [Header("Health")]
     [SerializeField] private float healthAwal;
     public float healthSaatIni { get; private set; }
     private Animator anim;
     public bool dead;
     public bool penuh;
 
+    [Header("IFrames")]
+    [SerializeField] private float durasi;
+    [SerializeField] private float banyakFlash;
+    private SpriteRenderer sprt;
+
     void Awake()
     {
         healthSaatIni = healthAwal;
         anim = GetComponent<Animator>();
+        sprt = GetComponent<SpriteRenderer>();
     }
 
     public void KenaDamage (float _damage)
@@ -23,7 +31,7 @@ public class Health : MonoBehaviour
         {
             //jika darah masih ada, animasi hurt akan terjadi
             anim.SetTrigger("hurt");
-            //iframes
+            StartCoroutine(immunity());
         }
         else
         {
@@ -49,5 +57,18 @@ public class Health : MonoBehaviour
         }else{
             penuh = false;
         }
+    }
+
+    private IEnumerator immunity()
+    {
+        Physics2D.IgnoreLayerCollision(3, 10, true);
+        for (int i = 0; i < banyakFlash; i++)
+        {
+            sprt.color = new Color(1, 0, 0, 0.5f);
+            yield return new WaitForSeconds(durasi / (banyakFlash * 2));
+            sprt.color = Color.white;
+            yield return new WaitForSeconds(durasi / (banyakFlash * 2));
+        }
+        Physics2D.IgnoreLayerCollision(3, 10, false);
     }
 }

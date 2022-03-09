@@ -10,7 +10,6 @@ public class Duri : MonoBehaviour
         if (collision.tag == "Player")
         {
             //jika terkena duri, akan memanggil method untuk mengurangi nyawa
-            Health a = GetComponentInChildren<Health>();
             collision.GetComponentInChildren<Health>().KenaDamage(damage);
         }
     }
