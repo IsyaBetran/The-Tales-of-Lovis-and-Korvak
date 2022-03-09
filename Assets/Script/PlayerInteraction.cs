@@ -24,6 +24,7 @@ public class PlayerInteraction : MonoBehaviour
             //jika didepan player ada kotak dan player menekan tombol E, kotak akan fixed join permframe tepat disamping player
             kotak = hit.collider.gameObject;
             kotak.GetComponent<FixedJoint2D>().enabled = true;
+            kotak.GetComponent<TarikKotak>().ditarik = true;
             kotak.GetComponent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
             pegang = true;
         }
@@ -31,6 +32,7 @@ public class PlayerInteraction : MonoBehaviour
         {
             //jika tombol E dilepas, kotak tidak fixedjoined
             kotak.GetComponent<FixedJoint2D>().enabled = false;
+            kotak.GetComponent<TarikKotak>().ditarik = false;
             pegang = false;
         }
     }
