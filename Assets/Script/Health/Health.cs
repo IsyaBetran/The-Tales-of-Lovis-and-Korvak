@@ -9,7 +9,6 @@ public class Health : MonoBehaviour
     private Animator anim;
     public bool dead;
     public bool penuh;
-    [SerializeField]private Checkpoint cp;
 
     [Header("IFrames")]
     [SerializeField] private float durasi;
@@ -51,10 +50,7 @@ public class Health : MonoBehaviour
             healthSaatIni = Mathf.Clamp(healthSaatIni + _value, 0, healthAwal);               
     }
 
-    public void FixedUpdate(){
-        if(cp.respawn){
-            dead = false;
-        }
+    public void Update(){
         //mengecek apakah darah penuh atau tidak.
         if(healthSaatIni == healthAwal){
             penuh = true;
