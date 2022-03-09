@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 13146308}
   - component: {fileID: 13146307}
   - component: {fileID: 13146311}
+  - component: {fileID: 13146312}
   m_Layer: 9
   m_Name: kotak
   m_TagString: Untagged
@@ -189,7 +190,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &13146309
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -273,6 +274,19 @@ FixedJoint2D:
   m_ConnectedAnchor: {x: 2.19, y: -3.66}
   m_DampingRatio: 0
   m_Frequency: 0
+--- !u!114 &13146312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13146306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb4b6697ae10a6b4faa9f56154ddbf7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ditarik: 0
 --- !u!1 &22003024
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,7 +452,7 @@ GameObject:
   - component: {fileID: 329344643}
   - component: {fileID: 329344647}
   - component: {fileID: 329344648}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pemain
   m_TagString: Player
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -599,7 +613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19c3a72d91ab7264e88083d09e413e66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  darah: {fileID: 2094964415}
+  darah: {fileID: 0}
 --- !u!1 &351095394
 GameObject:
   m_ObjectHideFlags: 0
@@ -1196,7 +1210,7 @@ GameObject:
   - component: {fileID: 1103573731}
   - component: {fileID: 1103573730}
   - component: {fileID: 1103573729}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Trap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8493,6 +8507,8 @@ MonoBehaviour:
   healthAwal: 3
   dead: 0
   penuh: 0
+  durasi: 1
+  banyakFlash: 3
 --- !u!114 &2094964416
 MonoBehaviour:
   m_ObjectHideFlags: 0
