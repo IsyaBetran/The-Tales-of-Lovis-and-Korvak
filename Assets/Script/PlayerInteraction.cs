@@ -27,9 +27,8 @@ public class PlayerInteraction : MonoBehaviour
             kotak.GetComponent<TarikKotak>().ditarik = true;
             kotak.GetComponent<FixedJoint2D>().connectedBody = this.GetComponent<Rigidbody2D>();
             pegang = true;
-            Debug.Log("MAsuk sini");
         }
-        else if (hit.collider != null && Input.GetKeyUp(KeyCode.E))
+        else if (Input.GetKeyUp(KeyCode.E))
         {
             //jika tombol E dilepas, kotak tidak fixedjoined
             kotak.GetComponent<FixedJoint2D>().enabled = false;
