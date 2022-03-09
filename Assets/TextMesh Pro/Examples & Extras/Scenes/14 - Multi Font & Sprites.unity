@@ -215,11 +215,19 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream:Assets/TextMesh Pro/Examples & Extras/Scenes/14 - Multi Font & Sprites.unity
   - component: {fileID: 921526342}
   - component: {fileID: 921526341}
   - component: {fileID: 921526338}
   m_Layer: 0
   m_Name: TextMeshPro
+=======
+  - component: {fileID: 579991771}
+  - component: {fileID: 579991770}
+  - component: {fileID: 579991772}
+  m_Layer: 8
+  m_Name: Square
+>>>>>>> Stashed changes:Assets/Scenes/SampleScene.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -388,11 +396,19 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream:Assets/TextMesh Pro/Examples & Extras/Scenes/14 - Multi Font & Sprites.unity
   - component: {fileID: 1390778677}
   - component: {fileID: 1390778676}
   - component: {fileID: 1390778675}
   m_Layer: 0
   m_Name: TMP SubMesh [Anton SDF - Drop Shadow]
+=======
+  - component: {fileID: 1361446043}
+  - component: {fileID: 1361446042}
+  - component: {fileID: 1361446044}
+  m_Layer: 8
+  m_Name: Square (1)
+>>>>>>> Stashed changes:Assets/Scenes/SampleScene.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -542,3 +558,26 @@ Transform:
   m_Father: {fileID: 921526342}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream:Assets/TextMesh Pro/Examples & Extras/Scenes/14 - Multi Font & Sprites.unity
+=======
+--- !u!114 &2094964419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094964414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71446e7b91d0f864d99628798a4a83d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  badan: {fileID: 2094964416}
+  gravitasi: 80
+  kecepatan: 10
+  cekTanah: {fileID: 0}
+  cekKetinggian: 0.1
+  tanahnya:
+    serializedVersion: 2
+    m_Bits: 256
+>>>>>>> Stashed changes:Assets/Scenes/SampleScene.unity
